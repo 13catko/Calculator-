@@ -1,0 +1,168 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a,
+button,
+input,
+textarea {
+  outline: transparent;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding-inline: 0;
+  appearance: none;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font: inherit;
+  font-family: Inter;
+  font-size: 38.315px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+button:hover {
+  box-shadow: 0 0 4px 0 #fff;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  font-family: Inter;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.calculator {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  top: 0;
+  padding-top: 30px;
+}
+
+.calculator__inner {
+  width: 430px;
+  background-color: #000;
+  border-radius: 10px;
+}
+
+.calculator__num-list {
+  margin-bottom: 10px;
+}
+
+.calculator__display-num {
+  font-size: 107px;
+  text-align: right;
+  padding-top: 178px;
+  padding-right: 36px;
+  margin-bottom: 4px;
+}
+
+.calculator__button {
+  width: 92px;
+  height: 92px;
+  background-color: #343434;
+  border-radius: 50%;
+  border: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator__num-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 13.5px;
+  padding: 11px;
+  justify-content: flex-end;
+}
+
+.calculator__button-operand {
+  background-color: #ff9900;
+}
+
+.calculator__num-item:last-child {
+  grid-row: 5;
+  grid-column: 4;
+
+}

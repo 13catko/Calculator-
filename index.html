@@ -1,11 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Калькулятор</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="calculator" style="background-image: url(img/bg.jpg)">
+        <div class="container">
+          <div class="calculator__inner">
+            <div class="result">
+              <div class="calculator__display-num" id="displayNum">0</div>
+            </div>
+            <ul class="calculator__num-list">
+              <li class="calculator__num-item">
+                <button class="calculator__button">7</button>
+              </li>
+              <li class="calculator__num-item">
+                <button class="calculator__button">8</button>
+              </li>
+              <li class="calculator__num-item">
+                <button class="calculator__button">9</button>
+              </li>
+              <li class="calculator__num-item">
+                <button class="calculator__button calculator__button-operand">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="23"
+                    viewBox="0 0 24 23"
+                    fill="none"
+                  >
+                    <path
+                      d="M11.4162 15.8305C9.57495 15.8305 8.08266 17.2161 8.08266 18.9259C8.08266 20.6356 9.57495 22.0213 11.4162 22.0213C13.2575 22.0213 14.7498 20.6356 14.7498 18.9259C14.7498 17.2161 13.2575 15.8305 11.4162 15.8305ZM11.4162 6.54412C13.2575 6.54412 14.7498 5.15842 14.7498 3.44867C14.7498 1.73892 13.2575 0.353226 11.4162 0.353226C9.57495 0.353226 8.08266 1.73892 8.08266 3.44867C8.08266 5.15842 9.57495 6.54412 11.4162 6.54412ZM23.1561 10.4134H11.6751H0.111094C0.111094 9.55879 0.111094 11.0114 0.111094 10.4134V11.6583C0.111067 12.528 0.111095 12.0537 0.111094 12.8979H23.1561C23.1561 12.3518 23.1561 12.8158 23.1561 11.9611V10.4134C23.1561 11.0635 23.1561 9.55879 23.1561 10.4134Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
+              </li>
+              <li class="calculator__num-item">
+                <button class="calculator__button">4</button>
+              </li>
+              <li class="calculator__num-item">
+                <button class="calculator__button">5</button>
+              </li>
+              <li class="calculator__num-item">
+                <button class="calculator__button">6</button>
+              </li>
+              <li class="calculator__num-item">
+                <button class="calculator__button calculator__button-operand">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="23"
+                    viewBox="0 0 22 23"
+                    fill="none"
+                  >
+                    <path
+                      d="M0.706128 0.86752C0.849866 0.723417 1.02062 0.609087 1.20861 0.531079C1.39661 0.453071 1.59814 0.412918 1.80168 0.412918C2.00521 0.412918 2.20675 0.453071 2.39474 0.531079C2.58273 0.609087 2.75349 0.723417 2.89723 0.86752L11.086 9.05938L19.2748 0.86752C19.4186 0.72365 19.5894 0.609526 19.7774 0.531665C19.9654 0.453803 20.1668 0.413728 20.3703 0.413728C20.5738 0.413728 20.7752 0.453803 20.9632 0.531665C21.1512 0.609526 21.322 0.72365 21.4658 0.86752C21.6097 1.01139 21.7238 1.18219 21.8017 1.37016C21.8796 1.55814 21.9196 1.75961 21.9196 1.96307C21.9196 2.16653 21.8796 2.368 21.8017 2.55598C21.7238 2.74395 21.6097 2.91475 21.4658 3.05862L13.274 11.2474L21.4658 19.4361C21.6097 19.58 21.7238 19.7508 21.8017 19.9388C21.8796 20.1268 21.9196 20.3282 21.9196 20.5317C21.9196 20.7352 21.8796 20.9366 21.8017 21.1246C21.7238 21.3126 21.6097 21.4834 21.4658 21.6272C21.322 21.7711 21.1512 21.8852 20.9632 21.9631C20.7752 22.041 20.5738 22.081 20.3703 22.081C20.1668 22.081 19.9654 22.041 19.7774 21.9631C19.5894 21.8852 19.4186 21.7711 19.2748 21.6272L11.086 13.4354L2.89723 21.6272C2.75336 21.7711 2.58256 21.8852 2.39458 21.9631C2.20661 22.041 2.00514 22.081 1.80168 22.081C1.59821 22.081 1.39674 22.041 1.20877 21.9631C1.02079 21.8852 0.849997 21.7711 0.706128 21.6272C0.562258 21.4834 0.448134 21.3126 0.370273 21.1246C0.292411 20.9366 0.252336 20.7352 0.252336 20.5317C0.252336 20.3282 0.292411 20.1268 0.370273 19.9388C0.448134 19.7508 0.562258 19.58 0.706128 19.4361L8.89799 11.2474L0.706128 3.05862C0.562025 2.91488 0.447695 2.74412 0.369687 2.55613C0.291679 2.36814 0.251526 2.1666 0.251526 1.96307C0.251526 1.75953 0.291679 1.558 0.369687 1.37001C0.447695 1.18201 0.562025 1.01126 0.706128 0.86752Z"
+                      fill="#F8F8F8"
+                    />
+                  </svg>
+                </button>
+              </li>
+              <li class="calculator__num-item">
+                <button class="calculator__button">1</button>
+              </li>
+              <li class="calculator__num-item">
+                <button class="calculator__button">2</button>
+              </li>
+              <li class="calculator__num-item">
+                <button class="calculator__button">3</button>
+              </li>
+              <li class="calculator__num-item">
+                <button class="calculator__button calculator__button-operand">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="5"
+                    viewBox="0 0 30 5"
+                    fill="none"
+                  >
+                    <path
+                      d="M0.689789 0.315186H29.2005V4.87689H0.689789V0.315186Z"
+                      fill="#F8F8F8"
+                    />
+                  </svg>
+                </button>
+              </li>
+              <li class="calculator__num-item">
+                <button class="calculator__button">.</button>
+              </li>
+              <li class="calculator__num-item">
+                <button class="calculator__button">0</button>
+              </li>
+              <li class="calculator__num-item">
+                <button class="calculator__button">AC</button>
+              </li>
+              <li class="calculator__num-item">
+                <button class="calculator__button calculator__button-operand">
+                  +
+                </button>
+              </li>
+              <li class="calculator__num-item">
+                <button class="calculator__button calculator__button-operand">
+                  =
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
